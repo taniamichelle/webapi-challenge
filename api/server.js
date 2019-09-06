@@ -8,6 +8,9 @@ server.use(logger);
 const projectsRouter = require('./projectsRouter');
 server.use('/api/projects', projectsRouter);
 
+const actionsRouter = require('./actionsRouter');
+server.use('/api/actions', actionsRouter);
+
 server.get('/', (req, res) => {
     res.send(`<h1>Server is listening!</h1>`);
 });
