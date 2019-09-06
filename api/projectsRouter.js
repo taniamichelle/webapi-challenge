@@ -1,11 +1,13 @@
 const express = require('express');
 
 const Projects = require('../data/helpers/projectModel');
+const Actions = require('../data/helpers/actionModel');
 
 const router = express.Router('express');
 
 const validateProject = require('../middleware/validateProject');
 const validateProjectId = require('../middleware/validateProjectId');
+const validateAction = require('../middleware/validateAction');
 
 // get all projects
 router.get('/', (req, res) => {
@@ -71,9 +73,18 @@ router.delete('/:id', validateProjectId, (req, res) => {
         });
 });
 
-// router.post('/:id/actions', (req, res) => {
-
-// });
+// add action to project by id
+router.post('/:id/actions', validateProjectId, validateAction, (req, res) => {
+    const action = req.body;
+    Actions.insert(action)
+        .then(action => {
+            res.status(201).json(action);
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json({ error: "Error adding action to project." });
+        });
+});
 
 module.exports = router;
 
