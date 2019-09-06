@@ -33,10 +33,13 @@ router.get('/:id', validateActionId, (req, res) => {
 // update an action by id
 router.put('/:id', validateAction, validateActionId, (req, res) => {
     const { id } = req.params;
-    const action = req.body;
-    Actions.update(action)
-        .then(() => {
-            res.status(200).json(action);
+    const { description, notes } = req.body;
+    Actions.update(id, { description, notes })
+        .then(updated => {
+            if (updated) {
+                res.status(200).json(req.body);
+            }
+
         })
         .catch(err => {
             console.log(err);
