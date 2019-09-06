@@ -24,42 +24,43 @@ In this challenge, create a web API around the following resources: `Projects` a
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] Mention two parts of Express that you learned about this week.
-
-
+- [X] Mention two parts of Express that you learned about this week.
+    
+    1) The different types of middleware: built-in, 3rd party, custom
+    2) How to build middleware and how to use built-in and 3rd party middleware.
 
 - [ ] Describe Middleware?
 
-
+    Software that bridges an OS/db and an application. It is similar to React components as it enables you to reuse functions throughout your app. It can perform actions and proceed to the next specified action in the chain (you've provided).
 
 - [ ] Describe a Resource?
 
-
+    A file with code that can be used in a second file in order for that second file's code to function.
 
 - [ ] What can the API return to help clients know if a request was successful?
 
-
+    An API can return error messages to let clients know why a request was unsuccesful.
 
 - [ ] How can we partition our application into sub-applications?
 
-
+    We can use middleware to partition our app into sub-apps.
 
 ## Project Setup
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add your _Project Manager_ as collaborator on Github.
-- [ ] Clone your forked version of the Repository.
-- [ ] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
-- [ ] Implement the project on this Branch, committing changes regularly.
-- [ ] Push commits: git push origin `<firstName-lastName>`.
+- [X] Create a forked copy of this project.
+- [X] Add your _Project Manager_ as collaborator on Github.
+- [X] Clone your forked version of the Repository.
+- [X] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
+- [X] Implement the project on this Branch, committing changes regularly.
+- [X] Push commits: git push origin `<firstName-lastName>`.
 
 Follow these steps for completing your project.
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master on your fork. **Please don't merge your own pull request.**
-- [ ] Add your _Project Manager_ as a Reviewer on the Pull-request
-- [ ] Your _Project Manager_ will count the challenge as done by merging the branch into _master_.
+- [X] Submit a Pull-Request to merge <firstName-lastName> Branch into master on your fork. **Please don't merge your own pull request.**
+- [X] Add your _Project Manager_ as a Reviewer on the Pull-request
+- [X] Your _Project Manager_ will count the challenge as done by merging the branch into _master_.
 
 ## Database Persistence Helpers
 
@@ -84,7 +85,7 @@ The `projectModel.js` helper includes an extra method called `getProjectActions(
 Design and build the necessary endpoints to:
 
 - [X] Perform CRUD operations on _projects_ . 
-- [ ] Perform CRUD operations on _actions_. When adding an action, make sure the `project_id` provided belongs to an existing `project`. If you try to add an action with an `id` of 3 and there is no project with that `id` the database will return an error.
+- [X] Perform CRUD operations on _actions_. When adding an action, make sure the `project_id` provided belongs to an existing `project`. If you try to add an action with an `id` of 3 and there is no project with that `id` the database will return an error.
 - [X] Retrieve the list of actions for a project.
 
 ### Database Schemas
