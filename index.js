@@ -12,3 +12,7 @@ I need this code, just don't know where, perhaps should make some middleware, do
 
 Go code!
 */
+
+const server = require('./api/server');
+
+server.listen(8000, () => console.log("server listening on port 8000"));
